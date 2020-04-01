@@ -6,7 +6,7 @@ import os
 import numpy as np
 from matplotlib.ticker import MaxNLocator
 import matplotlib.ticker as ticker
-path="C:/給料/"
+path="C:/../給料/"
 #path = args.path
 files= os.listdir(path)
 fi_list = list(files)
@@ -57,15 +57,15 @@ ax2.plot(date_list,sum_salary,color='pink',label="支給総額",marker="x")
 ax2.plot(date_list,sum_get_money,color='magenta',label="支給総額",marker="x")
 
 for a,b in zip(date_list,salary):
-    ax1.annotate('%s'%b,xy=(a,b),xytext=(-20,10),textcoords='offset points')
+    ax1.annotate('%s'%b,xy=(a,b),xytext=(0,10),textcoords='offset points')
 for a,b in zip(date_list,get_money):
-    ax1.annotate('%s'%b,xy=(a,b),xytext=(-20,10),textcoords='offset points')
+    ax1.annotate('%s'%b,xy=(a,b),xytext=(0,10),textcoords='offset points')
 for a,b in zip(date_list,zangyou):
-    ax1.annotate('%s'%b,xy=(a,b),xytext=(-20,10),textcoords='offset points')
+    ax1.annotate('%s'%b,xy=(a,b),xytext=(0,10),textcoords='offset points')
 for a,b in zip(date_list,sum_salary):
-    ax2.annotate('%s'%b,xy=(a,b),xytext=(-20,10),textcoords='offset points')
+    ax2.annotate('%s'%b,xy=(a,b),xytext=(0,10),textcoords='offset points')
 for a,b in zip(date_list,sum_get_money):
-    ax2.annotate('%s'%b,xy=(a,b),xytext=(-20,10),textcoords='offset points')
+    ax2.annotate('%s'%b,xy=(a,b),xytext=(0,-10),textcoords='offset points')
 handler1, label1 = ax1.get_legend_handles_labels()
 handler2, label2 = ax2.get_legend_handles_labels()
 ax1.legend(handler1 + handler2, label1 + label2, loc=2, borderaxespad=0.)
@@ -73,8 +73,8 @@ ax1.legend(handler1 + handler2, label1 + label2, loc=2, borderaxespad=0.)
 pageview_max = max(salary)
 register_max = max(sum_salary)
 
-ax1.set_ylim([0, pageview_max])
-ax2.set_ylim([0, register_max])
+ax1.set_ylim([0, 1.1*pageview_max])
+ax2.set_ylim([0, 1.1*register_max])
 plt.xlabel('月',fontproperties='SimSun',fontsize=9)
 plt.ylabel('円(千)',fontproperties='SimSun',fontsize=9)
 plt.show()
