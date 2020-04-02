@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-import pandas as pd
-import matplotlib.pyplot as plt
-import matplotlib
 import os
-import numpy as np
-from matplotlib.ticker import MaxNLocator
+import pandas as pd
+import matplotlib
+import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
+import numpy as np
+
 path="C:/../給料/"
 #path = args.path
 files= os.listdir(path)
