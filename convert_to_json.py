@@ -4,7 +4,7 @@ import cv2
 from random import randint
 
 TEST_FLAG   = False
-IMAGE_DIR   = '/vol1/user/wang/YOLO/data/output/'
+IMAGE_DIR   = '/output/'
 
 CLASSES = ['Car', 'Bus', 'Truck', 'Svehicle', 'Pedestrian',\
     'Motorbile', 'Bicycle', 'Train', 'Signal', 'Signs']
