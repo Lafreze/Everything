@@ -45,16 +45,16 @@ for file in fi_list:
 
 matplotlib.rcParams['font.family']='SimSun'
 fig, ax1 = plt.subplots()
-ax1.plot(date_list, salary,color='b',label="支給内容計",marker="o")
-ax1.plot(date_list, get_money,color='lightblue',label="銀行振込額",marker="o")
+ax1.plot(date_list, salary,color='b',label="給料",marker="o")
+ax1.plot(date_list, get_money,color='lightblue',label="手取り",marker="o")
 #ax1.plot(date_list, out_money,label="引去内容計",marker="o")
 #ax1.plot(date_list, tax_list,label="所得税",marker=".")
-ax1.plot(date_list, zangyou,label="時間外勤務手当",marker="o")
+ax1.plot(date_list, zangyou,label="残業手当",marker="o")
 ax2 = ax1.twinx()
 sum_salary = np.cumsum(salary)
 sum_get_money = np.cumsum(get_money)
-ax2.plot(date_list,sum_salary,color='pink',label="支給総額",marker="x")
-ax2.plot(date_list,sum_get_money,color='magenta',label="支給総額",marker="x")
+ax2.plot(date_list,sum_salary,color='pink',label="給料総額",marker="x")
+ax2.plot(date_list,sum_get_money,color='magenta',label="手取り総額",marker="x")
 
 for a,b in zip(date_list,salary):
     ax1.annotate('%s'%b,xy=(a,b),xytext=(0,10),textcoords='offset points')
