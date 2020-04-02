@@ -4,9 +4,9 @@ import glob, os
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Directory where the data will reside, relative to 'darknet.exe'
-path_images = '/vol1/user/wang/YOLO/data_wafer/datas/images/'
-path_labels = '/vol1/user/wang/YOLO/data/labels/'
-path_data = '/vol1/user/wang/YOLO/data_wafer/datas/'
+path_images = '/datas/images/'
+path_labels = 'O/data/labels/'
+path_data = '/data_wafer/datas/'
 # Percentage of images to be used for the test set
 percentage_test = 15;
 
